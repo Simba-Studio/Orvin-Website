@@ -21,7 +21,7 @@ const Section = styled.section`
   align-items: center;
   padding: 5rem 5%;
   position: relative;
-  background: rgba(18, 18, 18, 0.7); // Semi-transparent overlay
+  background: rgba(18, 18, 18, 0.5); // Semi-transparent overlay
   overflow-y: auto; // Enable vertical scrolling
 `;
 
@@ -43,7 +43,7 @@ const TitleContainer = styled.div`
   font-size: 3.5rem;
   margin-bottom: 1rem;
   color: ${props => props.theme.textColor};
-  line-height: 1.4;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,15 +64,15 @@ const Line = styled(motion.div)`
   justify-content: center;
   gap: 0.5rem;
 `;
-
 const Word = styled(motion.span)`
   display: inline-block;
   white-space: pre;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 const ItalicWord = styled(motion.span)`
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', serif;
   color: ${props => props.theme.primaryColor};
   display: inline-block;
 `;
@@ -82,7 +82,7 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  const firstLine = 'every great thing'.split(' ');
+  const firstLine = 'Every Great Thing'.split(' ');
   const secondLine = ''.split(' ');
 
   useEffect(() => {
@@ -155,18 +155,9 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
                 exit='exit'
                 transition={{ staggerChildren: 0.2, delayChildren: 1.5 }}
               >
-                {secondLine.map((word, i) => (
-                  <Word
-                    key={i}
-                    variants={fadeInUp}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {word}
-                  </Word>
-                ))}
-                <ItalicWord variants={fadeInUp} transition={{ duration: 0.5 }}>
-                  begins with a little waiting
-                </ItalicWord>
+                <Word variants={fadeInUp} transition={{ duration: 0.5 }}>
+                  Begins With a Little Waiting
+                </Word>
               </Line>
             </TitleContainer>
           )}
