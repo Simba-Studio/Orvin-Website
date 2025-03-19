@@ -96,25 +96,6 @@ const NavLink = styled(Link)`
   }
 `;
 
-const ContactButton = styled(Link)`
-  background-color: ${props => props.theme.primaryColor};
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 15px ${props => `${props.theme.primaryColor}40`};
-
-  &:hover {
-    background-color: ${props => props.theme.secondaryColor};
-  }
-
-  @media (max-width: 480px) {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
-  }
-`;
-
 const Header = () => {
   const [hideHeader, setHideHeader] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

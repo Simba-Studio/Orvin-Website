@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import HomeSection from '../components/HomeSection';
-import ContactSection from '../components/ContactSection';
 import ProjectsSection from '../components/ProjectsSection';
 import styled from 'styled-components';
 

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaTimes } from 'react-icons/fa';
 
 const ModalOverlay = styled(motion.div)`
   position: fixed;
@@ -35,22 +34,6 @@ const ModalContent = styled(motion.div)`
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: ${({ theme }) => '#f8f9fa'};
-  z-index: 10;
-
-  &:hover {
-    color: ${({ theme }) => '#3a86ff'};
-  }
 `;
 
 const Modal = ({ children, onClose }) => {

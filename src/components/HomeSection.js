@@ -78,106 +78,9 @@ const ItalicWord = styled(motion.span)`
   display: inline-block;
 `;
 
-const Description = styled(motion.p)`
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  color: ${props => props.theme.textColor};
-  opacity: 0.8;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
-const CTAButton = styled(Link)`
-  display: inline-block;
-  background-color: ${props => props.theme.primaryColor};
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: ${props => props.theme.transition};
-  margin-top: 1rem;
-
-  &:hover {
-    background-color: ${props => props.theme.secondaryColor};
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-`;
-
-const ScrollIndicator = styled.div`
-  position: absolute;
-  bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: bounce 2s infinite;
-  cursor: pointer;
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-10px);
-    }
-  }
-`;
-
-const ScrollText = styled.span`
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  color: ${props => props.theme.textColor};
-`;
-
-const Arrow = styled.div`
-  width: 30px;
-  height: 30px;
-  border-right: 3px solid ${props => props.theme.primaryColor};
-  border-bottom: 3px solid ${props => props.theme.primaryColor};
-  transform: rotate(45deg);
-`;
-
-const ButtonsContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-`;
-
-const Button = styled.button`
-  display: inline-block;
-  background-color: ${props => props.theme.primaryColor};
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: ${props => props.theme.transition};
-  margin-top: 1rem;
-
-  &:hover {
-    background-color: ${props => props.theme.secondaryColor};
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-`;
-
 const HomeSection = ({ scrollToContact, scrollToProjects }) => {
   const contentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [showDescription, setShowDescription] = useState(false);
   const sectionRef = useRef(null);
 
   const firstLine = 'Good things come'.split(' ');
@@ -195,7 +98,7 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
     const totalAnimationTime = totalWords * wordAnimationDuration * 1000 + 500; // +500ms buffer
 
     setTimeout(() => {
-      setShowDescription(true);
+      // setShowDescription(true);
     }, totalAnimationTime);
 
     // Set up scroll event listener
@@ -213,7 +116,7 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, [scrollToProjects]); // Updated dependency
+  }, [firstLine.length, secondLine.length]);
 
   const fadeInUp = {
     initial: { y: 20, opacity: 0 },

@@ -98,34 +98,6 @@ const SubmitButton = styled(motion.button)`
   }
 `;
 
-const ScrollUpIndicator = styled.div`
-  position: absolute;
-  top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-`;
-
-const ScrollText = styled.span`
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  color: ${props => props.theme.textColor};
-`;
-
-const Arrow = styled.div`
-  width: 30px;
-  height: 30px;
-  border-right: 3px solid ${props => props.theme.primaryColor};
-  border-bottom: 3px solid ${props => props.theme.primaryColor};
-  transform: rotate(-135deg);
-`;
-
 const ContactSection = ({ scrollToHome }) => {
   const sectionRef = useRef(null);
 
