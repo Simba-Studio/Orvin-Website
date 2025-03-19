@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import orvinLogo from '../assets/orvin.png';
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -31,13 +32,16 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled(Link)`
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${props => props.theme.primaryColor};
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+`;
+
+const LogoImage = styled.img`
+  height: 35px;
+  width: auto;
 
   @media (max-width: 480px) {
-    font-size: 1.5rem;
+    height: 30px;
   }
 `;
 
@@ -140,7 +144,9 @@ const Header = () => {
 
   return (
     <HeaderContainer hide={hideHeader} isScrolled={isScrolled}>
-      <Logo to='/'>orvin</Logo>
+      <Logo to='/'>
+        <LogoImage src={orvinLogo} alt='orvin logo' />
+      </Logo>
       <NavLinks>
         <NavLink
           to='#projects'

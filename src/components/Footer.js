@@ -20,7 +20,7 @@ function Footer() {
 
   return (
     <FooterContainer>
-      <p>© {currentYear} Orvin - All rights reserved.</p>
+      <p>© {currentYear} orvin - All rights reserved.</p>
     </FooterContainer>
   );
 }

@@ -82,8 +82,8 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  const firstLine = 'Good things come'.split(' ');
-  const secondLine = 'to those'.split(' ');
+  const firstLine = 'every great thing'.split(' ');
+  const secondLine = ''.split(' ');
 
   useEffect(() => {
     setTimeout(() => {
@@ -165,7 +165,7 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
                   </Word>
                 ))}
                 <ItalicWord variants={fadeInUp} transition={{ duration: 0.5 }}>
-                  who wait
+                  begins with a little waiting
                 </ItalicWord>
               </Line>
             </TitleContainer>
