@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "orvin",
+  "name": "orvin - Mobile App Studio",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "orvin-logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "orvin-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "orvin-logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -21,5 +21,23 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "orvin - Mobile App Studio",
+  "author": "orvin",
+  "copyright": "orvin",
+  "keywords": [
+    "orvin",
+    "mobile app studio",
+    "mobile app development",
+    "mobile app design",
+    "mobile app development company",
+    "mobile app development services",
+    "mobile app development agency",
+    "mobile app development company in india",
+    "mobile app development company in mumbai",
+    "mobile app development company in india",
+    "mobile app development company in mumbai",
+    "mobile app development company in india",
+    "mobile app development company in mumbai"
+  ]
 }
