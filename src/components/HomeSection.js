@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import backgroundVideo from '../assets/motion2.mp4';
 
@@ -116,7 +115,7 @@ const HomeSection = ({ scrollToContact, scrollToProjects }) => {
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, [firstLine.length, secondLine.length]);
+  }, [firstLine.length, secondLine.length, scrollToProjects]);
 
   const fadeInUp = {
     initial: { y: 20, opacity: 0 },
