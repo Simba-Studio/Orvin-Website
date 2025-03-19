@@ -37,7 +37,7 @@ const Logo = styled(Link)`
 `;
 
 const LogoImage = styled.img`
-  height: 35px;
+  height: 30px;
   width: auto;
 
   @media (max-width: 480px) {

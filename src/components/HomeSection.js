@@ -70,13 +70,6 @@ const Word = styled(motion.span)`
   font-family: 'Montserrat', sans-serif;
 `;
 
-const ItalicWord = styled(motion.span)`
-  font-style: italic;
-  font-family: 'Montserrat', serif;
-  color: ${props => props.theme.primaryColor};
-  display: inline-block;
-`;
-
 const HomeSection = ({ scrollToContact, scrollToProjects }) => {
   const contentRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
